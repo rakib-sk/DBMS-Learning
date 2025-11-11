@@ -27,7 +27,9 @@ Explain:
 
 
 
-<br />
+<br /># 💾 MariaDB Command Session — E-commerce Database Setup
+
+```sql
 MariaDB [(none)]> SHOW databases;
 +--------------------+
 | Database           |
@@ -41,21 +43,10 @@ MariaDB [(none)]> SHOW databases;
 +--------------------+
 6 rows in set (0.099 sec)
 
-MariaDB [(none)]> CREATE database E-comarce
-    
 
-MariaDB [(none)]> SHOW databases;
-+--------------------+
-| Database           |
-+--------------------+
-| information_schema |
-| mysql              |
-| performance_schema |
-| sys                |
-| test               |
-| testdb             |
-+--------------------+
-6 rows in set (0.082 sec)
+MariaDB [(none)]> CREATE DATABASE ecomarce;
+
+Query OK, 1 row affected (0.001 sec)
 
 
 MariaDB [(none)]> SHOW databases;
@@ -72,7 +63,14 @@ MariaDB [(none)]> SHOW databases;
 +--------------------+
 7 rows in set (0.003 sec)
 
-MariaDB [ecomarce]> CREATE TABLE product( Name VARCHAR(100), Discription VARCHAR(100), Price INT, Variant VARCHAR(100));
+
+MariaDB [ecomarce]> CREATE TABLE product(
+    Name VARCHAR(100),
+    Description VARCHAR(100),
+    Price INT,
+    Variant VARCHAR(100)
+);
+
 Query OK, 0 rows affected (0.094 sec)
 
 
@@ -83,7 +81,5 @@ MariaDB [ecomarce]> SHOW tables;
 | product            |
 +--------------------+
 1 row in set (0.014 sec)
-
-MariaDB [ecomarce]>
 
 
