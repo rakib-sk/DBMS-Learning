@@ -29,7 +29,7 @@ Explain:
 
 <br />
 <h2> Total terminal views </h2>
-mysql -u root
+<span>mysql -u root
 mysql: Deprecated program name. It will be removed in a future release, use '/data/data/com.termux/files/usr/bin/mariadb' instead
 Welcome to the MariaDB monitor.  Commands end with ; or \g.
 Your MariaDB connection id is 3
@@ -136,4 +136,5 @@ MariaDB [ecomarce]> SHOW tables;
 1 row in set (0.014 sec)
 
 MariaDB [ecomarce]>
+</span>
 
