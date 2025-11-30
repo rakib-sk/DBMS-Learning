@@ -691,3 +691,24 @@ SELECT * FROM tableName LIMIT value OFFSET value;
 - LIMIT ও OFFSET  
 
 ---
+
+
+# Class 7: Database Keys & Auto Increment
+
+এই README.md-তে আমরা তিনটি গুরুত্বপূর্ণ Database concept নিয়ে আলোচনা করবো: **Primary Key, Foreign Key, এবং Auto Increment।**  
+এগুলো Database design-এ খুবই গুরুত্বপূর্ণ, কারণ এগুলো Data integrity এবং relationships ঠিক রাখতে সাহায্য করে।  
+
+---
+
+## Summary Table
+
+| Concept        | Definition & Purpose                                                                 | Example                                                                                  |
+|----------------|-------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| Primary Key    | প্রতিটি row কে uniqueভাবে identify করে। Null হতে পারে না।                            | `CREATE TABLE Students (student_id INT PRIMARY KEY, name VARCHAR(50), age INT);`        |
+| Foreign Key    | একটি column যা অন্য table-এর primary key কে refer করে। Table-গুলোর মধ্যে relationship তৈরি করে। | `CREATE TABLE Students (student_id INT PRIMARY KEY, name VARCHAR(50), class_id INT, FOREIGN KEY (class_id) REFERENCES Classes(class_id));` |
+| Auto Increment | একটি column attribute যা automatically value increase করে প্রতিটি নতুন row-এর জন্য। মূলত Primary Key-এর সাথে ব্যবহার হয়। | `CREATE TABLE Students (student_id INT PRIMARY KEY AUTO_INCREMENT, name VARCHAR(50), age INT);` |
+
+---
+
+**Note:**  
+Database design-এ এই তিনটি concept ব্যবহার করলে **data integrity, uniqueness, এবং relationships** ঠিক রাখতে সহজ হয়।
